@@ -9,7 +9,7 @@ function Doctors() {
   const [specialization, setSpecialization] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3001/doctors")
+    fetch("https://mediqueue-backend-ba5p.onrender.com/doctors")
       .then((response) => response.json())
       .then((data) => {
         setDoctors(data);

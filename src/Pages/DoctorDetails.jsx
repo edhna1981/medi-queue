@@ -9,7 +9,7 @@ function DoctorDetails() {
   const [selectedSlot, setSelectedSlot] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:3001/doctors/${id}`)
+    fetch(`http:/https://mediqueue-backend-ba5p.onrender.com/doctors/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setDoctor(data);

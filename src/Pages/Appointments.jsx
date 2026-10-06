@@ -9,7 +9,7 @@ function Appointments() {
   const currentToken = appointments.length > 0? appointments[0].tokenNumber: "No active token";
 
   useEffect(() => {
-    fetch("http://localhost:3001/appointments")
+    fetch("https://mediqueue-backend-ba5p.onrender.com/appointments")
       .then((response) => response.json())
       .then((data) => {
         console.log("Appointments data:", data);
@@ -26,7 +26,7 @@ function Appointments() {
       return;
     }
 
-    fetch(`http://localhost:3001/appointments/${id}`, {
+    fetch(`https://mediqueue-backend-ba5p.onrender.com/appointments/${id}`, {
       method: "DELETE",
     }).then(() => {
       setAppointments(

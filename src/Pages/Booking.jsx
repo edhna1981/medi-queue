@@ -18,7 +18,7 @@ function Booking() {
   const selectedSlot = location.state?.selectedSlot;
 
   useEffect(() => {
-    fetch(`http://localhost:3001/doctors/${id}`)
+    fetch(`https://mediqueue-backend-ba5p.onrender.com/doctors/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setDoctor(data);
@@ -39,7 +39,7 @@ function Booking() {
       status: "Booked",
     };
 
-    fetch("http://localhost:3001/appointments", {
+    fetch("https://mediqueue-backend-ba5p.onrender.com/appointments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
